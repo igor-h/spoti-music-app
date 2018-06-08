@@ -7,14 +7,9 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor( private router:Router ) { }
+  constructor() { }
 
   ngOnInit() {
   }
-
-  buscarHeroe( textoBuscar:string ){
-      //console.log(termino);
-     this.router.navigate( ['/buscar',textoBuscar] );
-   }
 
 }

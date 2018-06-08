@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  // heroes:Heroe[] = [];
+   heroes:any[] = [];
   // textoBuscar:string;
 
 //   constructor(private _heroesService:HeroesService,
