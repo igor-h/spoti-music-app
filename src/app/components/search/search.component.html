@@ -10,22 +10,8 @@
 
 <div class="row mt-2">
   <div class="col">
-    <div class="card-columns">
 
-      <div *ngFor="let artista of artistas" class="card text-white bg-dark mb-3">
-        <img class="card-img-top" [src]="artista.images | noimage" [alt]="artista.name">
-        <div class="card-body">
-          <h5 class="card-title text-white">{{ artista.name }}</h5>
-         
-            <p class="card-text">
-                <span class="badge badge-pill badge-danger" *ngFor="let genero of artista.genres">
-                  {{ genero }}
-                </span>
-            </p>
-
-        </div>
-      </div>
-
-    </div>
+      <app-tarjeta [items]="artistas"></app-tarjeta>
+    
   </div>
 </div>

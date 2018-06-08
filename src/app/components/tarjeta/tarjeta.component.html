@@ -1,0 +1,31 @@
+<div class="card-columns">
+
+  <div *ngFor="let item of items" class="card text-white bg-dark mb-3">
+    <img class="card-img-top" [src]="item.images | noimage" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title text-white">
+        {{ item.name }}
+        <small *ngIf="item.release_date">
+          <span class="badge badge-light">{{item.release_date | date:'dd/MM/yyyy'}}</span>
+        </small>
+      </h5>
+
+      <div *ngIf="item.artists">
+        <p class="card-text">
+          <span class="badge badge-pill badge-primary" *ngFor="let artista of item.artists">
+            {{ artista.name }}
+          </span>
+        </p>
+      </div>
+
+      <div *ngIf="item.genres">
+        <p class="card-text">
+          <span class="badge badge-pill badge-danger" *ngFor="let genero of item.genres">
+            {{ genero }}
+          </span>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>

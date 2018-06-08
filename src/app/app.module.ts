@@ -17,6 +17,7 @@ import { SearchComponent } from './components/search/search.component';
 
 //Pipes
 import { NoimagePipe } from './pipes/noimage.pipe';
+import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
 
 
 
@@ -27,7 +28,8 @@ import { NoimagePipe } from './pipes/noimage.pipe';
     NavbarComponent,
     HomeComponent,
     SearchComponent,
-    NoimagePipe
+    NoimagePipe,
+    TarjetaComponent
   ],
   imports: [
     BrowserModule,
