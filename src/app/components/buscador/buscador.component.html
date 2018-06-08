@@ -1,0 +1,22 @@
+<h1>Resultado de busqueda: 
+  <button type="button" class="btn btn-primary">
+      {{ textoBuscar }} <span class="badge badge-light">{{ heroes.length }}</span>
+</button>
+</h1>
+<hr>
+
+<div class="row animated fadeIn fast" *ngIf="heroes.length == 0">
+  <div class="col-md-12">
+    <div class="alert alert-warning" role="alert">
+      No existen resultados con el texto: {{ textoBuscar }}
+    </div>
+  </div>
+</div>
+
+
+
+<div class="card-columns">
+
+  <app-heroe-tarjeta [heroe]="foo" [index]="foo.idx"  *ngFor="let foo of heroes"></app-heroe-tarjeta>
+
+</div>
