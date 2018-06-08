@@ -15,6 +15,9 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { SearchComponent } from './components/search/search.component';
 
+//Pipes
+import { NoimagePipe } from './pipes/noimage.pipe';
+
 
 
 @NgModule({
@@ -23,7 +26,8 @@ import { SearchComponent } from './components/search/search.component';
     AboutComponent,
     NavbarComponent,
     HomeComponent,
-    SearchComponent
+    SearchComponent,
+    NoimagePipe
   ],
   imports: [
     BrowserModule,
