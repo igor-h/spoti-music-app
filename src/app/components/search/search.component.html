@@ -1,22 +1,31 @@
-<h1>Resultado de busqueda: 
-  <button type="button" class="btn btn-primary">
-      {{ textoBuscar }} <span class="badge badge-light">{{ heroes.length }}</span>
-</button>
-</h1>
-<hr>
-
-<div class="row animated fadeIn fast" *ngIf="heroes.length == 0">
-  <div class="col-md-12">
-    <div class="alert alert-warning" role="alert">
-      No existen resultados con el texto: {{ textoBuscar }}
+<div class="row mt-5">
+  <div class="col">
+    <div class="input-group input-group-lg">
+      <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm"
+        #textoBuscar (keyup)="buscar(textoBuscar.value)" placeholder="Search Artist...">
     </div>
   </div>
 </div>
 
 
+<div class="row mt-2">
+  <div class="col">
+    <div class="card-columns">
 
-<div class="card-columns">
+      <div *ngFor="let artista of artistas" class="card text-white bg-dark mb-3">
+        <img class="card-img-top" [src]="artista.images[0].url" [alt]="artista.name">
+        <div class="card-body">
+          <h5 class="card-title text-white">{{ artista.name }}</h5>
+         
+            <p class="card-text">
+                <span class="badge badge-pill badge-danger" *ngFor="let genero of artista.genres">
+                  {{ genero }}
+                </span>
+            </p>
 
-  <!-- <app-heroe-tarjeta [heroe]="foo" [index]="foo.idx"  *ngFor="let foo of heroes"></app-heroe-tarjeta> -->
+        </div>
+      </div>
 
+    </div>
+  </div>
 </div>
