@@ -11,7 +11,6 @@ export class SearchComponent  {
  
   constructor(private _spotify: SpotifyService) {
     console.log("constructor buscador");
-
   }
 
   buscar(textoBuscar:string) {
@@ -20,12 +19,6 @@ export class SearchComponent  {
         this.artistas = data;
         console.log(this.artistas)
       });
-
-    // this.activatedRoute.params.subscribe(params => {
-    //   this.heroes = this._heroesService.buscarHeroes(params['textoBuscar']);
-    //   this.textoBuscar = params['textoBuscar'];
-    // })
   }
-
 }
 
