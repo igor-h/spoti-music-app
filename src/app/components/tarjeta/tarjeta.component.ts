@@ -11,7 +11,17 @@ export class TarjetaComponent  {
 
   @Input() items : any[] = [];
 
-  verArtista(){
-    this.router.
+  verArtista( item: any ) {
+
+    let artistaId;
+
+    if ( item.type === 'artist' ) {
+      artistaId = item.id;
+    } else {
+      artistaId = item.artists[0].id;
+    }
+
+    this.router.navigate([ '/artist', artistaId  ]);
+
   }
 }

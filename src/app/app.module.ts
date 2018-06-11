@@ -8,18 +8,19 @@ import { HttpClientModule } from '@angular/common/http';
 // Rutas
 import { ROUTES } from './app.routes';
 
+//Pipes
+import { NoimagePipe } from './pipes/noimage.pipe';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
+
 // Componentes
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { SearchComponent } from './components/search/search.component';
-
-//Pipes
-import { NoimagePipe } from './pipes/noimage.pipe';
-import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
-
+import { ArtistComponent } from './components/artist/artist.component';
+import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
 
 
 @NgModule({
@@ -30,8 +31,10 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     HomeComponent,
     SearchComponent,
     NoimagePipe,
+    DomseguroPipe,
     TarjetaComponent,
-    LoadingComponent
+    LoadingComponent,
+    ArtistComponent
   ],
   imports: [
     BrowserModule,

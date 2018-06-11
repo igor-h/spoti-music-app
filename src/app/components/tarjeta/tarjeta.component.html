@@ -1,6 +1,7 @@
 <div class="card-columns">
 
-  <div *ngFor="let item of items" class="card text-white bg-dark mb-3">
+
+  <div (click)="verArtista( item )"  *ngFor="let item of items" class="card text-white bg-dark mb-3 puntero">
     <img class="card-img-top" [src]="item.images | noimage" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title text-white">
