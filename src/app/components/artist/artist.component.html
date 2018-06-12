@@ -19,7 +19,7 @@
     <div class="col-4 text-right">
 
         <button routerLink="/search" class="btn btn-outline-danger">
-        Regresar
+        Volver
       </button>
 
     </div>
@@ -32,21 +32,21 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>Foto</th>
+                    <th></th>
                     <th>Album</th>
                     <th>Canción</th>
-                    <th>Vista Previa</th>
+                    <th></th>
                 </tr>
             </thead>
 
             <tbody>
                 <tr *ngFor="let track of topTracks">
-                    <td>
+                    <td class="align-middle">
                         <img [src]="track.album.images | noimage" class="img-thumb">
                     </td>
-                    <td>{{ track.album.name }}</td>
-                    <td>{{ track.name }}</td>
-                    <td>
+                    <td class="align-middle">{{ track.album.name }}</td>
+                    <td class="align-middle">{{ track.name }}</td>
+                    <td class="align-middle">
                         <!-- <audio [src]="track.preview_url" controls></audio> -->
                         <iframe [src]="track.uri | domseguro" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                     </td>
